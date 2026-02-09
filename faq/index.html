@@ -64,6 +64,7 @@ Este credito de desenvolvedor e obrigatorio.
     <script
         type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://comproourobangu.com.br/#website","url":"https://comproourobangu.com.br/","name":"Compro Ouro Bangu","description":"Compra de ouro, prata, brilhantes e relógios de luxo no Rio de Janeiro","inLanguage":"pt-BR"},{"@type":"Organization","@id":"https://comproourobangu.com.br/#organization","name":"Compro Ouro Bangu","url":"https://comproourobangu.com.br/","logo":"https://comproourobangu.com.br/images/logo-compro-ouro-bangu-optimized.webp","contactPoint":{"@type":"ContactPoint","telephone":"+55-21-99538-3681","contactType":"customer service","areaServed":"BR","availableLanguage":"Portuguese"},"sameAs":["https://www.instagram.com/comproouro.bangu/","https://www.facebook.com/comproourobangu"]},{"@type":"PawnShop","@id":"https://comproourobangu.com.br/#localbusiness","name":"Compro Ouro Bangu","image":"https://comproourobangu.com.br/images/logo-compro-ouro-bangu-optimized.webp","url":"https://comproourobangu.com.br/","telephone":"+55-21-99538-3681","priceRange":"$$$","address":{"@type":"PostalAddress","streetAddress":"Av. Cônego de Vasconcelos 168, Sala 301","addressLocality":"Rio de Janeiro","addressRegion":"RJ","postalCode":"21810-012","addressCountry":"BR"},"geo":{"@type":"GeoCoordinates","latitude":-22.8736,"longitude":-43.4617},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"13:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"847"}}]}</script>
     <link rel="stylesheet" href="/_astro/_slug_.0zdY9Ski.css">
+    <!-- <link rel="stylesheet" href="/styles/style.css"> -->
 </head>
 
 <body class="bg-black text-white min-h-screen"> <a href="#main-content" class="skip-link">Pular para o conteúdo
@@ -133,8 +134,7 @@ Este credito de desenvolvedor e obrigatorio.
                         href="/faq/"
                         class="text-gray-300 hover:text-[#d4af37] text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:ring-offset-2 focus:ring-offset-black rounded"
                         data-testid="link-nav-faq" aria-label="Ir para FAQ"> FAQ </a>
-                        <a
-                        href="/contato/"
+                    <a href="/contato/"
                         class="text-gray-300 hover:text-[#d4af37] text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:ring-offset-2 focus:ring-offset-black rounded"
                         data-testid="link-nav-contact" aria-label="Ir para Contatos">Contato</a>
                 </nav>
@@ -168,17 +168,56 @@ Este credito de desenvolvedor e obrigatorio.
                 </div>
             </div>
             <div id="mobile-menu" class="lg:hidden hidden bg-black/95 border-t border-[#d4af37]/20 py-4">
-                <nav class="flex flex-col gap-2" role="navigation" aria-label="Menu mobile"> <a href="/"
-                        class="text-gray-300 hover:text-[#d4af37] text-sm font-medium px-4 py-3 text-left rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
-                        aria-label="Ir para Início"> Início </a><a href="/#categorias"
-                        class="text-gray-300 hover:text-[#d4af37] text-sm font-medium px-4 py-3 text-left rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
-                        aria-label="Ir para O Que Compramos"> O Que Compramos </a><a href="/#como-funciona"
-                        class="text-gray-300 hover:text-[#d4af37] text-sm font-medium px-4 py-3 text-left rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
-                        aria-label="Ir para Como Funciona"> Como Funciona </a><a href="/#avaliacoes"
-                        class="text-gray-300 hover:text-[#d4af37] text-sm font-medium px-4 py-3 text-left rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
-                        aria-label="Ir para Avaliações"> Avaliações </a><a href="/faq/"
-                        class="text-gray-300 hover:text-[#d4af37] text-sm font-medium px-4 py-3 text-left rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
-                        aria-label="Ir para FAQ"> FAQ </a>
+                <nav class="flex flex-col gap-2" role="navigation" aria-label="Menu mobile">
+                    <a href="/"
+                        class="text-gray-300 hover:text-[#d4af37] px-4 py-3 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:ring-offset-2 focus:ring-offset-black rounded"
+                        data-testid="link-nav-início" aria-label="Ir para Início"> Início </a>
+                    <a href="/sobre"
+                        class="text-gray-300 hover:text-[#d4af37] px-4 py-3 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:ring-offset-2 focus:ring-offset-black rounded"
+                        data-testid="link-nav-o-que-compramos" aria-label="Ir para Sobre Nós">Sobre nós</a>
+                    <div class="relative group inline-block" id="mobile-dropdown-container">
+                        <div id="mobile-services-menu-button"
+                            class="text-gray-300 hover:text-[#d4af37] px-4 py-3 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:ring-offset-2 focus:ring-offset-black rounded inline-flex items-center gap-1"
+                            aria-expanded="false" aria-haspopup="true">
+                            Serviços
+                            <svg class="w-4 h-4 transition-transform duration-200" id="mobile-dropdown-arrow"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+
+                        <div id="mobile-services-dropdown"
+                            class="w-full mt-2 rounded-md shadow-lg bg-black ring-1 ring-[#d4af37] ring-opacity-50 hidden transition-all duration-200 z-50">
+                            <div class="py-1" role="menu" aria-orientation="horizontal">
+                                <a href="/servicos/compra-de-ouro/"
+                                    class="block px-4 py-2 text-sm text-gray-300 hover:text-[#d4af37] px-4 py-3 transition-colors"
+                                    role="menuitem">Compra de Ouro</a>
+                                <a href="/servicos/compra-de-prata/"
+                                    class="block px-4 py-2 text-sm text-gray-300 hover:text-[#d4af37] px-4 py-3 transition-colors"
+                                    role="menuitem">Compra de Prata</a>
+                                <a href="/servicos/compra-de-joias/"
+                                    class="block px-4 py-2 text-sm text-gray-300 hover:text-[#d4af37] px-4 py-3 transition-colors"
+                                    role="menuitem">Compra de Joias</a>
+                                <a href="/servicos/compra-de-brilhantes/"
+                                    class="block px-4 py-2 text-sm text-gray-300 hover:text-[#d4af37] px-4 py-3 transition-colors"
+                                    role="menuitem">Compra de Brilhantes</a>
+                                <a href="/servicos/compra-de-relogios/"
+                                    class="block px-4 py-2 text-sm text-gray-300 hover:text-[#d4af37] px-4 py-3 transition-colors"
+                                    role="menuitem">Compra de Relógios</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/#avaliacoes"
+                        class="text-gray-300 hover:text-[#d4af37] px-4 py-3 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:ring-offset-2 focus:ring-offset-black rounded"
+                        data-testid="link-nav-avaliações" aria-label="Ir para Avaliações"> Avaliações </a>
+                    <a href="/faq/"
+                        class="text-gray-300 hover:text-[#d4af37] px-4 py-3 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:ring-offset-2 focus:ring-offset-black rounded"
+                        data-testid="link-nav-faq" aria-label="Ir para FAQ"> FAQ </a>
+                    <a href="/contato/"
+                        class="text-gray-300 hover:text-[#d4af37] px-4 py-3 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:ring-offset-2 focus:ring-offset-black rounded"
+                        data-testid="link-nav-contact" aria-label="Ir para Contatos">Contato</a>
                     <div class="px-4 pt-2"> <a
                             href="https://wa.me/5521995383681?text=Olá! Gostaria de fazer uma avaliação das minhas joias."
                             target="_blank" rel="noopener noreferrer"
@@ -199,9 +238,9 @@ Este credito de desenvolvedor e obrigatorio.
         type="module">const e = document.getElementById("mobile-menu-button"), t = document.getElementById("mobile-menu"), s = document.getElementById("menu-icon"), i = document.getElementById("close-icon"); e && t && s && i && (e.addEventListener("click", () => { const n = t.classList.contains("hidden"); t.classList.toggle("hidden"), s.classList.toggle("hidden"), i.classList.toggle("hidden"), e.setAttribute("aria-expanded", n ? "true" : "false"), e.setAttribute("aria-label", n ? "Fechar menu" : "Abrir menu") }), t.querySelectorAll("a").forEach(n => { n.addEventListener("click", () => { t.classList.add("hidden"), s.classList.remove("hidden"), i.classList.add("hidden"), e.setAttribute("aria-expanded", "false"), e.setAttribute("aria-label", "Abrir menu") }) }));</script>
     <main id="main-content" class="bg-black min-h-screen">
         <section class="py-12 sm:py-16 md:py-24">
-            <div class="container mx-auto px-4 sm:px-6 md:px-8 max-w-4xl">
-                <div class="text-center mb-10 sm:mb-14"> <span
-                        class="text-[#d4af37] font-medium text-xs sm:text-sm tracking-widest uppercase">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8">
+                <div class="text-center mb-10 sm:mb-14">
+                    <span class="text-[#d4af37] font-medium text-xs sm:text-sm tracking-widest uppercase">
                         Perguntas Frequentes
                     </span>
                     <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mt-3 sm:mt-4 tracking-wide leading-tight"
@@ -473,6 +512,132 @@ Este credito de desenvolvedor e obrigatorio.
                         </div>
                     </details>
                 </div>
+                <section class="py-12 sm:py-16 md:py-24 bg-black relative overflow-hidden"
+                    data-testid="section-categories" aria-labelledby="categories-title">
+                    <div class="container mx-auto px-4 sm:px-6 md:px-8 relative z-10">
+                        <div class="text-center mb-8 sm:mb-12">
+                            <span class="text-[#d4af37] font-medium text-xs sm:text-sm tracking-widest uppercase">
+                                Nossos serviços
+                            </span>
+                            <h2 id="categories-title"
+                                class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mt-3 sm:mt-4 tracking-wide"
+                                style="font-family: 'Bebas Neue', Impact, sans-serif;">
+                                Atendemos em Bangu – RJ e região, avaliando e comprando:
+                            </h2>
+                            <div class="w-16 sm:w-24 h-1 bg-gradient-to-r from-transparent via-[#d4af37] to-transparent mx-auto mt-4 sm:mt-6"
+                                aria-hidden="true"></div>
+                        </div>
+                        <div class="grid grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6">
+                            <a href="/servicos/compra-de-ouro/" class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
+                                data-testid="card-category-ouro-e-prata" itemscope
+                                itemtype="https://schema.org/Service">
+                                <img src="/images/ouro_24k_22k_18k_16k_14k_12k_10k.png"
+                                    alt="Compramos Ouro e Prata - Barras, moedas, joias ou sucata. em Bangu, Rio de Janeiro"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    loading="lazy" width="300" height="300">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20">
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 border-2 border-[#d4af37] rounded-xl">
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#d4af37]/10">
+                                </div>
+                                <div class="absolute inset-0 flex flex-col items-center justify-center p-4 z-10">
+                                    <h3 class="font-heading font-bold text-lg md:text-xl lg:text-2xl text-white text-center group-hover:text-[#d4af37] transition-colors leading-tight"
+                                        itemprop="name"> Ouro </h3>
+                                    <p class="text-gray-300 text-xs md:text-sm font-body text-center mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-w-[90%]"
+                                        itemprop="description"> Barras, moedas, joias ou sucata. </p>
+                                </div>
+                            </a>
+                            <a href="/servicos/compra-de-prata/" class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
+                                data-testid="card-category-ouro-e-prata" itemscope
+                                itemtype="https://schema.org/Service">
+                                <img src="/images/vender_joias_prata.png"
+                                    alt="Compramos Ouro e Prata - Barras, moedas, joias ou sucata. em Bangu, Rio de Janeiro"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    loading="lazy" width="300" height="300">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20">
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 border-2 border-[#d4af37] rounded-xl">
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#d4af37]/10">
+                                </div>
+                                <div class="absolute inset-0 flex flex-col items-center justify-center p-4 z-10">
+                                    <h3 class="font-heading font-bold text-lg md:text-xl lg:text-2xl text-white text-center group-hover:text-[#d4af37] transition-colors leading-tight"
+                                        itemprop="name"> Prata </h3>
+                                    <p class="text-gray-300 text-xs md:text-sm font-body text-center mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-w-[90%]"
+                                        itemprop="description"> Anéis, colares, pulseiras e brincos de prata </p>
+                                </div>
+                            </a>
+                            <a href="/servicos/compra-de-joias/" class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
+                                data-testid="card-category-joias-antigas" itemscope
+                                itemtype="https://schema.org/Service"> <img src="/images/joias-antigas-opt.webp"
+                                    alt="Compramos Joias Antigas - Danificadas, amassadas ou fora de moda. em Bangu, Rio de Janeiro"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    loading="lazy" width="300" height="300">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20">
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 border-2 border-[#d4af37] rounded-xl">
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#d4af37]/10">
+                                </div>
+                                <div class="absolute inset-0 flex flex-col items-center justify-center p-4 z-10">
+                                    <h3 class="font-heading font-bold text-lg md:text-xl lg:text-2xl text-white text-center group-hover:text-[#d4af37] transition-colors leading-tight"
+                                        itemprop="name"> Joias Antigas </h3>
+                                    <p class="text-gray-300 text-xs md:text-sm font-body text-center mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-w-[90%]"
+                                        itemprop="description"> Danificadas, amassadas ou fora de moda. </p>
+                                </div>
+                            </a>
+                            <a href="/servicos/compra-de-relogios/" class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
+                                data-testid="card-category-relógios" itemscope itemtype="https://schema.org/Service">
+                                <img src="/images/relogio-omega-opt.webp"
+                                    alt="Compramos Relógios - Rolex, Omega, TAG Heuer e mais. em Bangu, Rio de Janeiro"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    loading="lazy" width="300" height="300">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20">
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 border-2 border-[#d4af37] rounded-xl">
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#d4af37]/10">
+                                </div>
+                                <div class="absolute inset-0 flex flex-col items-center justify-center p-4 z-10">
+                                    <h3 class="font-heading font-bold text-lg md:text-xl lg:text-2xl text-white text-center group-hover:text-[#d4af37] transition-colors leading-tight"
+                                        itemprop="name"> Relógios </h3>
+                                    <p class="text-gray-300 text-xs md:text-sm font-body text-center mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-w-[90%]"
+                                        itemprop="description"> Rolex, Omega, TAG Heuer e mais. </p>
+                                </div>
+                            </a>
+                            <a href="/servicos/compra-de-brilhantes/" class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
+                                data-testid="card-category-brilhantes" itemscope itemtype="https://schema.org/Service">
+                                <img src="/images/brilhantes-opt.webp"
+                                    alt="Compramos Brilhantes - Com ou sem certificado GIA. em Bangu, Rio de Janeiro"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    loading="lazy" width="300" height="300">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20">
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 border-2 border-[#d4af37] rounded-xl">
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#d4af37]/10">
+                                </div>
+                                <div class="absolute inset-0 flex flex-col items-center justify-center p-4 z-10">
+                                    <h3 class="font-heading font-bold text-lg md:text-xl lg:text-2xl text-white text-center group-hover:text-[#d4af37] transition-colors leading-tight"
+                                        itemprop="name"> Brilhantes </h3>
+                                    <p class="text-gray-300 text-xs md:text-sm font-body text-center mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-w-[90%]"
+                                        itemprop="description"> Com ou sem certificado GIA. </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
                 <div
                     class="mt-10 sm:mt-14 text-center bg-gradient-to-br from-[#d4af37]/10 to-[#d4af37]/5 border border-[#d4af37]/40 rounded-2xl p-8 sm:p-10">
                     <h2 class="text-2xl sm:text-3xl text-white mb-4"
@@ -481,16 +646,24 @@ Este credito de desenvolvedor e obrigatorio.
                     </h2>
                     <p class="text-gray-200 text-lg mb-6">
                         Entre em contato pelo WhatsApp e tire todas as suas dúvidas.
-                    </p> <a href="https://wa.me/5521995383681?text=Olá! Tenho uma dúvida sobre a compra de ouro."
-                        target="_blank" rel="noopener noreferrer"
-                        class="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-lg px-8 py-4 rounded-full transition-all duration-300 shadow-lg shadow-[#25D366]/30"
-                        data-testid="cta-whatsapp-faq"> <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
-                            </path>
-                        </svg>
-                        FALAR NO WHATSAPP
-                    </a>
+                    </p>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <a href="/contato/"
+                            class="flex w-full justify-center items-center gap-2 px-8 py-4 text-[#d4af37] hover:bg-[#d4af37]/10 font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black" style="text-decoration: underline;">
+                            Entre em contato para avaliação gratuita
+                        </a>
+                        <a href="https://wa.me/5521995383681?text=Olá! Tenho uma dúvida sobre a compra de ouro."
+                            target="_blank" rel="noopener noreferrer"
+                            class="flex w-full justify-center items-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-lg px-8 py-4 rounded-full transition-all duration-300 shadow-lg shadow-[#25D366]/30"
+                            data-testid="cta-whatsapp-faq"> <svg class="w-6 h-6" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
+                                </path>
+                            </svg>
+                            FALAR NO WHATSAPP
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -588,6 +761,63 @@ Este credito de desenvolvedor e obrigatorio.
         </svg> </a>
     <script
         type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Onde posso vender ouro com segurança no Rio de Janeiro?","acceptedAnswer":{"@type":"Answer","text":"Você pode vender ouro com total segurança na Compro Ouro Bangu, empresa com mais de 35 anos de atuação no mercado de compra de ouro no Rio de Janeiro, reconhecida pela avaliação justa, atendimento profissional e pagamento imediato."}},{"@type":"Question","name":"A Compro Ouro Bangu atende clientes de bairros nobres do Rio de Janeiro?","acceptedAnswer":{"@type":"Answer","text":"Sim. Atendemos clientes de toda a cidade do Rio de Janeiro, incluindo Barra da Tijuca, Recreio dos Bandeirantes, Zona Sul, Centro e Zona Oeste, com atendimento presencial em nossa unidade e avaliação profissional."}},{"@type":"Question","name":"Pessoas da Zona Sul do Rio vendem ouro na Compro Ouro Bangu?","acceptedAnswer":{"@type":"Answer","text":"Sim. Recebemos clientes de Copacabana, Ipanema, Leblon, Botafogo, Flamengo e Laranjeiras que buscam uma empresa tradicional, confiável e com histórico sólido na compra de ouro no Rio de Janeiro."}},{"@type":"Question","name":"Quem mora na Barra da Tijuca pode vender ouro com vocês?","acceptedAnswer":{"@type":"Answer","text":"Sim. Atendemos clientes da Barra da Tijuca, Jardim Oceânico, Recreio dos Bandeirantes e regiões próximas, que preferem uma empresa com avaliação transparente, ambiente seguro e pagamento imediato."}},{"@type":"Question","name":"A avaliação do ouro é gratuita no Rio de Janeiro?","acceptedAnswer":{"@type":"Answer","text":"Sim. A avaliação do ouro é totalmente gratuita, sem compromisso de venda. O cliente recebe o valor e decide com tranquilidade."}},{"@type":"Question","name":"O pagamento pela venda do ouro é imediato?","acceptedAnswer":{"@type":"Answer","text":"Sim. Após a avaliação presencial, o pagamento é realizado imediatamente, sem burocracia, independentemente do bairro de origem do cliente."}},{"@type":"Question","name":"Vocês compram joias usadas e ouro quebrado?","acceptedAnswer":{"@type":"Answer","text":"Sim. Compramos ouro quebrado, joias usadas, alianças, correntes, pulseiras e anéis, com avaliação baseada no peso e no teor do ouro, não no estado da peça."}},{"@type":"Question","name":"A Compro Ouro Bangu é uma empresa confiável no Rio de Janeiro?","acceptedAnswer":{"@type":"Answer","text":"Sim. Somos uma empresa tradicional, com avaliações reais e verificadas no Google, reconhecida por clientes de todas as regiões do Rio de Janeiro, incluindo bairros nobres e áreas centrais."}},{"@type":"Question","name":"Vocês compram relógios de luxo no Rio de Janeiro?","acceptedAnswer":{"@type":"Answer","text":"Compramos relógios de ouro e relógios de marcas selecionadas, sujeitos à análise técnica presencial, com atendimento discreto e profissional."}},{"@type":"Question","name":"É necessário agendar para vender ouro?","acceptedAnswer":{"@type":"Answer","text":"Não é obrigatório, mas recomendamos contato prévio para maior comodidade, especialmente para clientes que vêm de outras regiões do Rio de Janeiro."}},{"@type":"Question","name":"Onde fica a loja da Compro Ouro Bangu?","acceptedAnswer":{"@type":"Answer","text":"Nossa unidade está localizada em Bangu, no Rio de Janeiro, com fácil acesso para Zona Sul, Barra da Tijuca, Centro e Zona Oeste, oferecendo ambiente seguro e atendimento presencial."}}]}</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const desktopContainer = document.getElementById('dropdown-container');
+            const desktopDropdown = document.getElementById('services-dropdown');
+            const desktopArrow = document.getElementById('dropdown-arrow');
+            let desktopTimeout;
+
+            desktopContainer.addEventListener('mouseenter', () => {
+                clearTimeout(desktopTimeout);
+                desktopDropdown.classList.replace('opacity-0', 'opacity-100');
+                desktopDropdown.classList.replace('invisible', 'visible');
+                desktopDropdown.classList.replace('translate-y-2', 'translate-y-0');
+                desktopArrow.classList.add('rotate-180');
+            });
+
+            desktopContainer.addEventListener('mouseleave', () => {
+                desktopTimeout = setTimeout(() => {
+                    desktopDropdown.classList.replace('opacity-100', 'opacity-0');
+                    desktopDropdown.classList.replace('visible', 'invisible');
+                    desktopDropdown.classList.replace('translate-y-0', 'translate-y-2');
+                    desktopArrow.classList.remove('rotate-180');
+                }, 150);
+            });
+
+            const mobileButton = document.getElementById('mobile-services-menu-button');
+            const mobileDropdown = document.getElementById('mobile-services-dropdown');
+            const mobileArrow = document.getElementById('mobile-dropdown-arrow');
+
+            mobileButton.removeEventListener('click', () => {});
+
+            mobileButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const isHidden = mobileDropdown.classList.contains('hidden');
+
+                if (isHidden) {
+                    mobileDropdown.classList.remove('hidden');
+                    mobileArrow.classList.add('rotate-180');
+                    mobileButton.setAttribute('aria-expanded', 'true');
+                } else {
+                    mobileDropdown.classList.add('hidden');
+                    mobileArrow.classList.remove('rotate-180');
+                    mobileButton.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Fechar ao clicar em um link do serviço (Mobile)
+            const mobileLinks = mobileDropdown.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileDropdown.classList.add('hidden');
+                    mobileArrow.classList.remove('rotate-180');
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

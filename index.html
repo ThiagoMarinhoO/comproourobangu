@@ -283,8 +283,7 @@ Este credito de desenvolvedor e obrigatorio.
                         href="/faq/"
                         class="text-gray-300 hover:text-[#d4af37] text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:ring-offset-2 focus:ring-offset-black rounded"
                         data-testid="link-nav-faq" aria-label="Ir para FAQ"> FAQ </a>
-                        <a
-                        href="/contato/"
+                    <a href="/contato/"
                         class="text-gray-300 hover:text-[#d4af37] text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:ring-offset-2 focus:ring-offset-black rounded"
                         data-testid="link-nav-contact" aria-label="Ir para Contatos">Contato</a>
                 </nav>
@@ -318,17 +317,56 @@ Este credito de desenvolvedor e obrigatorio.
                 </div>
             </div>
             <div id="mobile-menu" class="lg:hidden hidden bg-black/95 border-t border-[#d4af37]/20 py-4">
-                <nav class="flex flex-col gap-2" role="navigation" aria-label="Menu mobile"> <a href="/"
-                        class="text-gray-300 hover:text-[#d4af37] text-sm font-medium px-4 py-3 text-left rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
-                        aria-label="Ir para Início"> Início </a><a href="/#categorias"
-                        class="text-gray-300 hover:text-[#d4af37] text-sm font-medium px-4 py-3 text-left rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
-                        aria-label="Ir para O Que Compramos"> O Que Compramos </a><a href="/#como-funciona"
-                        class="text-gray-300 hover:text-[#d4af37] text-sm font-medium px-4 py-3 text-left rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
-                        aria-label="Ir para Como Funciona"> Como Funciona </a><a href="/#avaliacoes"
-                        class="text-gray-300 hover:text-[#d4af37] text-sm font-medium px-4 py-3 text-left rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
-                        aria-label="Ir para Avaliações"> Avaliações </a><a href="/faq/"
-                        class="text-gray-300 hover:text-[#d4af37] text-sm font-medium px-4 py-3 text-left rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
-                        aria-label="Ir para FAQ"> FAQ </a>
+                <nav class="flex flex-col gap-2" role="navigation" aria-label="Menu mobile">
+                    <a href="/"
+                        class="text-gray-300 hover:text-[#d4af37] px-4 py-3 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:ring-offset-2 focus:ring-offset-black rounded"
+                        data-testid="link-nav-início" aria-label="Ir para Início"> Início </a>
+                    <a href="/sobre"
+                        class="text-gray-300 hover:text-[#d4af37] px-4 py-3 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:ring-offset-2 focus:ring-offset-black rounded"
+                        data-testid="link-nav-o-que-compramos" aria-label="Ir para Sobre Nós">Sobre nós</a>
+                    <div class="relative group inline-block" id="mobile-dropdown-container">
+                        <div id="mobile-services-menu-button"
+                            class="text-gray-300 hover:text-[#d4af37] px-4 py-3 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:ring-offset-2 focus:ring-offset-black rounded inline-flex items-center gap-1"
+                            aria-expanded="false" aria-haspopup="true">
+                            Serviços
+                            <svg class="w-4 h-4 transition-transform duration-200" id="mobile-dropdown-arrow"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+
+                        <div id="mobile-services-dropdown"
+                            class="w-full mt-2 rounded-md shadow-lg bg-black ring-1 ring-[#d4af37] ring-opacity-50 hidden transition-all duration-200 z-50">
+                            <div class="py-1" role="menu" aria-orientation="horizontal">
+                                <a href="/servicos/compra-de-ouro/"
+                                    class="block px-4 py-2 text-sm text-gray-300 hover:text-[#d4af37] px-4 py-3 transition-colors"
+                                    role="menuitem">Compra de Ouro</a>
+                                <a href="/servicos/compra-de-prata/"
+                                    class="block px-4 py-2 text-sm text-gray-300 hover:text-[#d4af37] px-4 py-3 transition-colors"
+                                    role="menuitem">Compra de Prata</a>
+                                <a href="/servicos/compra-de-joias/"
+                                    class="block px-4 py-2 text-sm text-gray-300 hover:text-[#d4af37] px-4 py-3 transition-colors"
+                                    role="menuitem">Compra de Joias</a>
+                                <a href="/servicos/compra-de-brilhantes/"
+                                    class="block px-4 py-2 text-sm text-gray-300 hover:text-[#d4af37] px-4 py-3 transition-colors"
+                                    role="menuitem">Compra de Brilhantes</a>
+                                <a href="/servicos/compra-de-relogios/"
+                                    class="block px-4 py-2 text-sm text-gray-300 hover:text-[#d4af37] px-4 py-3 transition-colors"
+                                    role="menuitem">Compra de Relógios</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/#avaliacoes"
+                        class="text-gray-300 hover:text-[#d4af37] px-4 py-3 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:ring-offset-2 focus:ring-offset-black rounded"
+                        data-testid="link-nav-avaliações" aria-label="Ir para Avaliações"> Avaliações </a>
+                    <a href="/faq/"
+                        class="text-gray-300 hover:text-[#d4af37] px-4 py-3 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:ring-offset-2 focus:ring-offset-black rounded"
+                        data-testid="link-nav-faq" aria-label="Ir para FAQ"> FAQ </a>
+                    <a href="/contato/"
+                        class="text-gray-300 hover:text-[#d4af37] px-4 py-3 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:ring-offset-2 focus:ring-offset-black rounded"
+                        data-testid="link-nav-contact" aria-label="Ir para Contatos">Contato</a>
                     <div class="px-4 pt-2"> <a
                             href="https://wa.me/5521995383681?text=Olá! Gostaria de fazer uma avaliação das minhas joias."
                             target="_blank" rel="noopener noreferrer"
@@ -475,14 +513,16 @@ Este credito de desenvolvedor e obrigatorio.
                     <div class="w-16 sm:w-24 h-1 bg-gradient-to-r from-transparent via-[#d4af37] to-transparent mx-auto mt-4 sm:mt-6"
                         aria-hidden="true"></div>
                 </div>
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-                    <article class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
+                <div class="grid grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6">
+                    <a href="/servicos/compra-de-ouro/"
+                        class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
                         data-testid="card-category-ouro-e-prata" itemscope itemtype="https://schema.org/Service">
-                        <img src="/images/ouro-prata-opt.webp"
+                        <img src="/images/ouro_24k_22k_18k_16k_14k_12k_10k.png"
                             alt="Compramos Ouro e Prata - Barras, moedas, joias ou sucata. em Bangu, Rio de Janeiro"
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             loading="lazy" width="300" height="300">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20">
+                        </div>
                         <div
                             class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 border-2 border-[#d4af37] rounded-xl">
                         </div>
@@ -491,18 +531,42 @@ Este credito de desenvolvedor e obrigatorio.
                         </div>
                         <div class="absolute inset-0 flex flex-col items-center justify-center p-4 z-10">
                             <h3 class="font-heading font-bold text-lg md:text-xl lg:text-2xl text-white text-center group-hover:text-[#d4af37] transition-colors leading-tight"
-                                itemprop="name"> Ouro e Prata </h3>
+                                itemprop="name"> Ouro </h3>
                             <p class="text-gray-300 text-xs md:text-sm font-body text-center mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-w-[90%]"
                                 itemprop="description"> Barras, moedas, joias ou sucata. </p>
                         </div>
-                    </article>
-                    <article class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
+                    </a>
+                    <a href="/servicos/compra-de-prata/"
+                        class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
+                        data-testid="card-category-ouro-e-prata" itemscope itemtype="https://schema.org/Service">
+                        <img src="/images/vender_joias_prata.png"
+                            alt="Compramos Ouro e Prata - Barras, moedas, joias ou sucata. em Bangu, Rio de Janeiro"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            loading="lazy" width="300" height="300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20">
+                        </div>
+                        <div
+                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 border-2 border-[#d4af37] rounded-xl">
+                        </div>
+                        <div
+                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[#d4af37]/10">
+                        </div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-4 z-10">
+                            <h3 class="font-heading font-bold text-lg md:text-xl lg:text-2xl text-white text-center group-hover:text-[#d4af37] transition-colors leading-tight"
+                                itemprop="name"> Prata </h3>
+                            <p class="text-gray-300 text-xs md:text-sm font-body text-center mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-w-[90%]"
+                                itemprop="description"> Anéis, colares, pulseiras e brincos de prata </p>
+                        </div>
+                    </a>
+                    <a href="/servicos/compra-de-joias/"
+                        class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
                         data-testid="card-category-joias-antigas" itemscope itemtype="https://schema.org/Service"> <img
                             src="/images/joias-antigas-opt.webp"
                             alt="Compramos Joias Antigas - Danificadas, amassadas ou fora de moda. em Bangu, Rio de Janeiro"
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             loading="lazy" width="300" height="300">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20">
+                        </div>
                         <div
                             class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 border-2 border-[#d4af37] rounded-xl">
                         </div>
@@ -515,14 +579,16 @@ Este credito de desenvolvedor e obrigatorio.
                             <p class="text-gray-300 text-xs md:text-sm font-body text-center mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-w-[90%]"
                                 itemprop="description"> Danificadas, amassadas ou fora de moda. </p>
                         </div>
-                    </article>
-                    <article class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
-                        data-testid="card-category-relógios" itemscope itemtype="https://schema.org/Service"> <img
-                            src="/images/relogio-omega-opt.webp"
+                    </a>
+                    <a href="/servicos/compra-de-relogios/"
+                        class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
+                        data-testid="card-category-relógios" itemscope itemtype="https://schema.org/Service">
+                        <img src="/images/relogio-omega-opt.webp"
                             alt="Compramos Relógios - Rolex, Omega, TAG Heuer e mais. em Bangu, Rio de Janeiro"
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             loading="lazy" width="300" height="300">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20">
+                        </div>
                         <div
                             class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 border-2 border-[#d4af37] rounded-xl">
                         </div>
@@ -535,14 +601,16 @@ Este credito de desenvolvedor e obrigatorio.
                             <p class="text-gray-300 text-xs md:text-sm font-body text-center mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-w-[90%]"
                                 itemprop="description"> Rolex, Omega, TAG Heuer e mais. </p>
                         </div>
-                    </article>
-                    <article class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
-                        data-testid="card-category-brilhantes" itemscope itemtype="https://schema.org/Service"> <img
-                            src="/images/brilhantes-opt.webp"
+                    </a>
+                    <a href="/servicos/compra-de-brilhantes/"
+                        class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer"
+                        data-testid="card-category-brilhantes" itemscope itemtype="https://schema.org/Service">
+                        <img src="/images/brilhantes-opt.webp"
                             alt="Compramos Brilhantes - Com ou sem certificado GIA. em Bangu, Rio de Janeiro"
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             loading="lazy" width="300" height="300">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20">
+                        </div>
                         <div
                             class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 border-2 border-[#d4af37] rounded-xl">
                         </div>
@@ -555,7 +623,7 @@ Este credito de desenvolvedor e obrigatorio.
                             <p class="text-gray-300 text-xs md:text-sm font-body text-center mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 max-w-[90%]"
                                 itemprop="description"> Com ou sem certificado GIA. </p>
                         </div>
-                    </article>
+                    </a>
                 </div>
             </div>
         </section>
@@ -565,7 +633,7 @@ Este credito de desenvolvedor e obrigatorio.
                 aria-hidden="true"></div>
             <div class="container mx-auto px-4 sm:px-6 md:px-8 relative z-10">
                 <div class="text-center mb-8 sm:mb-12">
-                    <div class="mb-8 sm:mb-10 mx-auto grid grid-cols-2 sm:grid-cols-1 justify-between gap-6 py-12">
+                    <div class="mb-8 sm:mb-10 mx-auto grid grid-cols-1 lg:grid-cols-2 justify-between gap-6 py-12">
                         <div class="hero-content">
                             <span class="text-[#d4af37] font-medium text-xs sm:text-sm tracking-widest uppercase"
                                 style="text-align: left; display: flex;">
@@ -587,8 +655,15 @@ Este credito de desenvolvedor e obrigatorio.
                                 Janeiro.
                             </p>
                             <div class="hero-actions">
-                                <a href="/sobre/" class="btn btn-primary rounded-2xl !font-bold">Saiba mais</a>
-                                <!-- <a href="#contact" class="btn btn-outline">Get Free Consultation</a> -->
+                                <a href="/sobre/"
+                                    class="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-2.5 bg-[#d4af37]/10 hover:bg-[#d4af37]/20 text-[#d4af37] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:ring-offset-2 focus:ring-offset-black border border-[#d4af37] mt-4">
+                                    Conheça Nossa História e Experiência
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                    </svg>
+                                </a>
                             </div>
                             <div class="hero-stats">
                                 <div class="stat-item">
@@ -1394,6 +1469,17 @@ Este credito de desenvolvedor e obrigatorio.
                         </div>
                     </details>
                 </div>
+                <div class="flex justify-center">
+                    <a href="/faq/"
+                        class="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-2.5 bg-[#d4af37]/10 hover:bg-[#d4af37]/20 text-[#d4af37] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:ring-offset-2 focus:ring-offset-black border border-[#d4af37] mt-8">
+                        Perguntas frequentes sobre vender ouro
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>
+                    </a>
+                </div>
             </div>
         </section>
         <section id="lojas" class="py-12 sm:py-16 md:py-24 bg-zinc-950 relative overflow-hidden"
@@ -1479,18 +1565,25 @@ Este credito de desenvolvedor e obrigatorio.
                         class="bg-zinc-900/50 border border-[#d4af37]/20 rounded-xl p-6 sm:p-8 flex flex-col justify-center items-center text-center">
                         <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">Fale Conosco Agora</h3>
                         <p class="text-gray-300 mb-6">Tire suas dúvidas ou agende uma avaliação gratuita pelo WhatsApp
-                        </p> <a
-                            href="https://wa.me/5521995383681?text=Olá! Gostaria de fazer uma avaliação das minhas joias."
-                            target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center gap-2 px-8 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-black"
-                            data-testid="button-whatsapp-location" aria-label="Avaliação Grátis via WhatsApp"> <svg
-                                class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                <path
-                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
-                                </path>
-                            </svg>
-                            AVALIAÇÃO GRÁTIS
-                        </a>
+                        </p>
+                        <div>
+                            <a href="/contato/"
+                                class="flex w-full justify-center items-center gap-2 px-8 py-4 text-[#d4af37] hover:bg-[#d4af37]/10 font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black"
+                                style="text-decoration: underline;">
+                                Entre em contato para avaliação gratuita
+                            </a>
+                            <a href="https://wa.me/5521995383681?text=Olá! Gostaria de fazer uma avaliação das minhas joias."
+                                target="_blank" rel="noopener noreferrer"
+                                class="flex w-full items-center justify-center gap-2 px-8 py-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-black mt-4"
+                                data-testid="button-whatsapp-location" aria-label="Avaliação Grátis via WhatsApp"> <svg
+                                    class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z">
+                                    </path>
+                                </svg>
+                                AVALIAÇÃO GRÁTIS
+                            </a>
+                        </div>
                     </div>
                 </div> <!-- Links de bairros ocultos para visual mais harmônico -->
                 <!-- As 124 páginas de bairros continuam ativas para SEO via sitemap -->
@@ -1590,29 +1683,59 @@ Este credito de desenvolvedor e obrigatorio.
         </svg> </a>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const container = document.getElementById('dropdown-container');
-            const dropdown = document.getElementById('services-dropdown');
-            const arrow = document.getElementById('dropdown-arrow');
-            let timeout;
+            const desktopContainer = document.getElementById('dropdown-container');
+            const desktopDropdown = document.getElementById('services-dropdown');
+            const desktopArrow = document.getElementById('dropdown-arrow');
+            let desktopTimeout;
 
-            function showMenu() {
-                clearTimeout(timeout);
-                dropdown.classList.remove('opacity-0', 'invisible', 'translate-y-2');
-                dropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
-                arrow.classList.add('rotate-180');
-            }
+            desktopContainer.addEventListener('mouseenter', () => {
+                clearTimeout(desktopTimeout);
+                desktopDropdown.classList.replace('opacity-0', 'opacity-100');
+                desktopDropdown.classList.replace('invisible', 'visible');
+                desktopDropdown.classList.replace('translate-y-2', 'translate-y-0');
+                desktopArrow.classList.add('rotate-180');
+            });
 
-            function hideMenu() {
-                // Delay de 150ms para melhorar a experiência (evita fechar brusco)
-                timeout = setTimeout(() => {
-                    dropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
-                    dropdown.classList.add('opacity-0', 'invisible', 'translate-y-2');
-                    arrow.classList.remove('rotate-180');
+            desktopContainer.addEventListener('mouseleave', () => {
+                desktopTimeout = setTimeout(() => {
+                    desktopDropdown.classList.replace('opacity-100', 'opacity-0');
+                    desktopDropdown.classList.replace('visible', 'invisible');
+                    desktopDropdown.classList.replace('translate-y-0', 'translate-y-2');
+                    desktopArrow.classList.remove('rotate-180');
                 }, 150);
-            }
+            });
 
-            container.addEventListener('mouseenter', showMenu);
-            container.addEventListener('mouseleave', hideMenu);
+            const mobileButton = document.getElementById('mobile-services-menu-button');
+            const mobileDropdown = document.getElementById('mobile-services-dropdown');
+            const mobileArrow = document.getElementById('mobile-dropdown-arrow');
+
+            mobileButton.removeEventListener('click', () => {});
+
+            mobileButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const isHidden = mobileDropdown.classList.contains('hidden');
+
+                if (isHidden) {
+                    mobileDropdown.classList.remove('hidden');
+                    mobileArrow.classList.add('rotate-180');
+                    mobileButton.setAttribute('aria-expanded', 'true');
+                } else {
+                    mobileDropdown.classList.add('hidden');
+                    mobileArrow.classList.remove('rotate-180');
+                    mobileButton.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Fechar ao clicar em um link do serviço (Mobile)
+            const mobileLinks = mobileDropdown.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileDropdown.classList.add('hidden');
+                    mobileArrow.classList.remove('rotate-180');
+                });
+            });
         });
     </script>
 </body>
